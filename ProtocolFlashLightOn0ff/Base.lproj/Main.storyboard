@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProtocolFlashLightOn0ff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌚 OFF 🌚 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftG-jE-c99">
+                                <rect key="frame" x="20.5" y="285.5" width="333" height="96"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06d-Uu-Cbc">
+                                <rect key="frame" x="132.5" y="457" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="2it-Lj-5Si"/>
+                                    <constraint firstAttribute="width" constant="110" id="TEl-aY-eCI"/>
+                                </constraints>
+                                <state key="normal" image="offBtn"/>
+                                <connections>
+                                    <action selector="ToggleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijA-tp-y5D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="06d-Uu-Cbc" secondAttribute="bottom" constant="100" id="Cys-2h-mY9"/>
+                            <constraint firstItem="06d-Uu-Cbc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DvQ-JO-4Ro"/>
+                            <constraint firstItem="ftG-jE-c99" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MO9-M4-vbd"/>
+                            <constraint firstItem="ftG-jE-c99" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajm-rG-l6T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="onOffButton" destination="06d-Uu-Cbc" id="4qF-xW-zr8"/>
+                        <outlet property="onOffLabel" destination="ftG-jE-c99" id="mUx-jA-kUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="offBtn" width="110" height="110"/>
+    </resources>
+</document>
